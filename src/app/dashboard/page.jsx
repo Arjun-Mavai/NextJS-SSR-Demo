@@ -23,7 +23,7 @@ export default async function Home( ) {
             <li key={index} className='card'>
               <a href={article.url} target='_blank' rel='noopener noreferrer'>
                 <div className='card-image'>
-                  {/* <img src={article.urlToImage} alt={article.title} /> */}
+                  <img src={article.urlToImage} alt={article.title} />
                  
                 </div>
                 <div className='card-content'>

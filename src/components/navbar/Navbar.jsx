@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Button onClick={onOpen}  className="btn btn-1" style={{backgroundColor:'#7928CA' , margin:'12px' ,   color:'black', width:'30px',display:'flex' , flexDirection:'column'}}>
+      <Button onClick={onOpen}  title='Chakra-UI Navbar'  className="btn btn-1" style={{backgroundColor:'#7928CA' , margin:'12px' ,   color:'black', width:'30px',display:'flex' , flexDirection:'column'}}>
        <div id="nav-menu">
        <div className='line'></div>
         <div className='line'></div>
@@ -34,10 +34,10 @@ export default function Navbar() {
 
       {/* Existing Navbar Links (Can be hidden or kept as per design choice) */}
       <div className='navbar' style={{ display: 'flex', gap: '20px' , border:'2px solid black', borderWidth:'auto' ,fontWeight:'bold' , fontSize:'30px' }}>
-        <Link href="/" style={{marginLeft:'30%'}}>Home</Link>
+        <Link href="/" style={{marginLeft:'30%'}} title='Home' >Home</Link>
         <Link href="/posts">Posts</Link>
-        <Link href="/dashboard">Dashboard (SSR)</Link>
-        <Link href="/login">CSR</Link>
+        <Link href="/dashboard" title='Leveraging Server Side Rendering '>Dashboard (SSR)</Link>
+        <Link href="/login" title='Using Client Side rendering'>CSR</Link>
       </div>
     </>
   );
