@@ -51,3 +51,56 @@ Published on: {new Date(article.publishedAt).toDateString()}
     </div>
 
 );
+
+
+################### login file code 
+// pages/csr-example.js
+"use client"
+
+import React, { useEffect, useState } from 'react';
+ 
+ 
+
+
+export default function CSRPage() {
+
+  const [data ,setData]= useState([]);
+
+  useEffect(()=>{
+    async function fetchData() {
+  try{
+    
+     const res=  await fetch('https://jsonplaceholder.typicode.com/posts') ;
+     if(!res.ok){
+      throw new Error(`Netowork response was not ok ${res.ok} ${res.status}`)
+     }
+     const jsonData = await res.json();
+     setData(jsonData)
+    
+
+  }
+
+  catch(error){
+    console.log(`Error occured while fetching the data ${error.message}`);
+    return []
+
+  }
+
+}
+    fetchData();
+    
+  },[])
+   
+
+  return (
+    <div>
+      <h1>Client-Side Rendering (CSR) Example with React Query</h1>
+      <ul>
+        { data?.map((item) => (
+          <li key={item.id}>{item.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+###############
