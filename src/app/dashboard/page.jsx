@@ -16,10 +16,18 @@ export default async function Home() {
       <ul className="card-list">
         {Array.isArray(articles) ? (
           articles.map((article, index) => (
+<<<<<<< HEAD
             <li key={index} className="card">
               <a href={article.url} target="_blank" rel="noopener noreferrer">
                 <div className="card-image">
                   <img src={article.urlToImage} alt={article.title} />
+=======
+            <li key={index} className='card'>
+              <a href={article.url} target='_blank' rel='noopener noreferrer'>
+                <div className='card-image'>
+                  <img src={article.urlToImage} alt={article.title} />
+                 
+>>>>>>> 22070b310f46dae305e782533c686cba7f452f86
                 </div>
                 <div className="card-content">
                   <h2 className="card-title">{article.title}</h2>
